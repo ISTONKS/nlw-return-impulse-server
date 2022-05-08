@@ -7,9 +7,7 @@ config({path: '../.env'})
 
 const app = express()
 
-app.use(cors({
-  origin: [process.env.URL_FRONTEND] || ['*']
-}))
+app.use(cors())
 app.use(express.json())
 app.use(routes)
 
